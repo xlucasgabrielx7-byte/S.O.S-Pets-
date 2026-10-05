@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cadastrar Animal | S.O.S pets</title><link rel="stylesheet" href="cadastrar-animal.css"></head>
+<body>
+<header><div><a href="index.html"><span>S.O.S pets</span></a></div><button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button><nav><ul><li><a href="index.html">Início</a></li><li><a href="animais.html">Animais</a></li><li><a href="como-adotar.html">Como Adotar</a></li><li><a href="sobre.html">Sobre Nós</a></li><li><a href="contato.html">Contato</a></li></ul></nav></header>
+<main class="cadastro-area"><section class="cadastro-box"><span class="linha"></span><h1>Cadastrar animal</h1><p>Preencha os dados para adicionar um animal à lista deste projeto.</p>
+<form id="form-cadastro-animal">
+<label>Nome<input name="nome" required></label>
+<label>Tipo<select name="tipo"><option value="cachorro">Cachorro</option><option value="gato">Gato</option><option value="outros">Outros</option></select></label>
+<label>Idade<select name="idade"><option value="filhote">Filhote</option><option value="jovem">Jovem</option><option value="adulto">Adulto</option><option value="idoso">Idoso</option></select></label>
+<label>Idade em texto<input name="idadeTexto" placeholder="Ex: 2 anos" required></label>
+<label>Porte<select name="porte"><option value="pequeno">Pequeno</option><option value="medio">Médio</option><option value="grande">Grande</option></select></label>
+<label>Sexo<input name="sexo" placeholder="Ex: Fêmea"></label>
+<label>Imagem (link)<input name="imagem" type="url" placeholder="https://..."></label>
+<label>Descrição<textarea name="descricao" rows="5"></textarea></label>
+<button type="submit">Cadastrar animal</button>
+</form></section></main>
+<script src="app.js"></script>
+</body></html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontre animais disponíveis para adoção">
+    <title>Animais | S.O.S pets</title>
+    <link rel="stylesheet" href="animais.css">
+</head>
+<body>
+<header>
+    <div><a href="index.html"><span>S.O.S pets</span></a></div>
+    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button><nav><ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="animais.html">Animais</a></li>
+        <li><a href="como-adotar.html">Como Adotar</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html">Entrar</a></li>
+    </ul></nav>
+</header>
+<main>
+    <section>
+        <span></span>
+        <h1>Encontre seu novo Companheiro</h1>
+        <p>Explore a lista de animais resgatados que buscam um lar cheio de amor e carinho.</p>
+        <p class="fonte-dados">Alguns cadastros desta página foram baseados em animais publicados pela ASPAN, em Natal e Parnamirim/RN.</p>
+    </section>
+    <section id="filtros">
+        <form>
+            <div><label for="pesquisa">Pesquisar</label><input type="search" id="pesquisa" placeholder="Ex: Mel, Tommy..."></div>
+            <div><label for="tipo">Tipo</label><select id="tipo"><option value="">Todos</option><option value="cachorro">Cachorro</option><option value="gato">Gato</option><option value="outros">Outros</option></select></div>
+            <div><label for="idade">Idade</label><select id="idade"><option value="">Todas</option><option value="filhote">Filhote</option><option value="jovem">Jovem</option><option value="adulto">Adulto</option><option value="idoso">Idoso</option></select></div>
+            <div><label for="porte">Porte</label><select id="porte"><option value="">Todos</option><option value="pequeno">Pequeno</option><option value="medio">Médio</option><option value="grande">Grande</option></select></div>
+            <button type="submit">Filtrar Animais</button>
+        </form>
+    </section>
+    <section id="lista-animais"></section>
+</main>
+<footer>
+    <div><h2>S.O.S pets</h2><p>Sua plataforma de conexão entre corações e patinhas.</p>
+        <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button><nav><ul><li><a href="index.html">Início</a></li><li><a href="animais.html">Animais</a></li><li><a href="como-adotar.html">Como Adotar</a></li><li><a href="sobre.html">Sobre Nós</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    </div><p>&copy; 2026 S.O.S pets. Todos os direitos reservados.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

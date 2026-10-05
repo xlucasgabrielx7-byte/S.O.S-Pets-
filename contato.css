@@ -1,0 +1,440 @@
+/* ==============================
+S.O.S pets — CONTATO
+============================== */
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: adote-entrada 0.65s ease-out both;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0d0d12;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* ==============================
+  CABEÇALHO
+  ============================== */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    background: #111118;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #292035;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header>div a {
+    text-decoration: none;
+}
+
+header span {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #a855f7;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+header span:hover {
+    color: #c084fc;
+    text-shadow: 0 0 15px #a855f7;
+}
+
+/* MENU */
+
+header nav ul,
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+header nav a,
+footer nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+header nav a:hover,
+footer nav a:hover {
+    color: #a855f7;
+}
+
+/* ==============================
+  CONTEÚDO PRINCIPAL
+  ============================== */
+
+main {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+/* ==============================
+  TÍTULO
+  ============================== */
+
+main>section:first-child {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+main>section:first-child span {
+    display: block;
+    width: 60px;
+    height: 5px;
+    background: #a855f7;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+main>section:first-child h1 {
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+main>section:first-child p {
+    max-width: 650px;
+    margin: auto;
+    color: #aaa;
+    font-size: 1.05rem;
+}
+
+/* ==============================
+  FORMULÁRIO
+  ============================== */
+
+#formulario {
+    background: #15151d;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #292035;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    margin-bottom: 60px;
+}
+
+#formulario h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #c084fc;
+}
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+#formulario form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formulario label {
+    font-weight: 600;
+    color: #eee;
+}
+
+/* CAMPOS */
+
+#formulario input,
+#formulario select,
+#formulario textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: #0d0d12;
+    color: #fff;
+    border: 1px solid #383044;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+#formulario input:focus,
+#formulario select:focus,
+#formulario textarea:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+}
+
+#formulario textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+/* SELECT */
+
+#formulario select {
+    cursor: pointer;
+}
+
+#formulario option {
+    background: #15151d;
+    color: #fff;
+}
+
+/* BOTÃO */
+
+#formulario button {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: #a855f7;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+#formulario button:hover {
+    background: #9333ea;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+}
+
+#formulario button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+  INFORMAÇÕES DE CONTATO
+  ============================== */
+
+#informacoes-contato {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#informacoes-contato article {
+    background: #15151d;
+    border: 1px solid #292035;
+    border-radius: 18px;
+    padding: 30px 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#informacoes-contato article:hover {
+    transform: translateY(-8px);
+    border-color: #a855f7;
+    box-shadow: 0 15px 30px rgba(168, 85, 247, 0.12);
+}
+
+#informacoes-contato article span {
+    display: flex;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(168, 85, 247, 0.12);
+    border-radius: 50%;
+}
+
+#informacoes-contato article h2 {
+    color: #c084fc;
+    margin-bottom: 10px;
+}
+
+#informacoes-contato article p {
+    color: #aaa;
+}
+
+/* ==============================
+  RODAPÉ
+  ============================== */
+
+footer {
+    background: #09090d;
+    border-top: 1px solid #292035;
+    padding: 45px 8%;
+    text-align: center;
+}
+
+footer h2 {
+    color: #a855f7;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #888;
+    margin-bottom: 25px;
+}
+
+footer nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==============================
+  ANIMAÇÕES
+  ============================== */
+
+main>section {
+    }
+
+/* ==============================
+  RESPONSIVIDADE
+  ============================== */
+
+@media (max-width: 800px) {
+
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    header nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        width: 92%;
+        padding: 60px 0;
+    }
+
+    #informacoes-contato {
+        grid-template-columns: 1fr;
+    }
+
+    #formulario {
+        padding: 25px;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    main>section:first-child h1 {
+        font-size: 2.2rem;
+    }
+
+    #formulario h2 {
+        font-size: 1.6rem;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+}
+/* Entrada discreta da página */
+@keyframes adote-entrada {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.aviso-site{position:fixed;right:20px;bottom:20px;z-index:9999;background:#15111d;color:#fff;border:1px solid #a855f7;border-radius:10px;padding:12px 16px;opacity:0;pointer-events:none;transform:translateY(8px);transition:.25s}.aviso-site.visivel{opacity:1;transform:none}.chat-botao{position:fixed;right:20px;bottom:75px;width:48px;height:48px;border:0;border-radius:50%;background:#a855f7;color:#fff;cursor:pointer;z-index:9998}.chat-adote{position:fixed;right:20px;bottom:130px;width:250px;background:#15111d;border:1px solid #38284a;border-radius:15px;padding:18px;z-index:9998;display:none;box-shadow:0 15px 35px #0006}.chat-adote.aberto{display:block}.chat-adote strong{display:block;margin-bottom:8px}.chat-adote p{color:#aaa;margin-bottom:12px}.chat-adote button{display:block;width:100%;margin-top:7px;padding:9px;border:1px solid #38284a;border-radius:8px;background:#201629;color:#fff;cursor:pointer}.acoes-animal{display:flex;align-items:center;gap:10px}.favoritar{border:0;background:transparent;color:#c084fc;font-size:28px;cursor:pointer}.nenhum-resultado{color:#aaa}
+
+
+/* =========================================================
+   S.O.S pets — MELHORIAS RESPONSIVAS PARA CELULAR
+   ========================================================= */
+.menu-mobile{
+    display:none;
+    appearance:none;
+    border:1px solid rgba(199,125,255,.45);
+    background:#15111d;
+    color:#fff;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    font-size:24px;
+    line-height:1;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+}
+@media (max-width: 700px){
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    header, body>header{
+        min-height:64px;
+        height:auto!important;
+        padding:12px 16px!important;
+        flex-direction:row!important;
+        flex-wrap:wrap;
+        gap:10px!important;
+    }
+    header > div:first-child, body>header>div:first-child{flex:1 1 auto}
+    header span, body>header span{font-size:24px!important;letter-spacing:1px!important}
+    .menu-mobile{display:flex}
+    header nav, body>header nav{
+        display:none;
+        width:100%;
+        flex-basis:100%;
+    }
+    header nav.menu-aberto, body>header nav.menu-aberto{display:block}
+    header nav ul, body>header nav ul{
+        width:100%;
+        display:flex!important;
+        flex-direction:column!important;
+        align-items:stretch!important;
+        gap:0!important;
+        padding:8px 0 2px;
+    }
+    header nav li{width:100%;text-align:center}
+    header nav a{
+        display:block;
+        width:100%;
+        padding:11px 8px;
+        font-size:15px!important;
+        border-radius:8px;
+    }
+    header nav a:hover{background:#20152c}
+    main{max-width:100%;overflow:hidden}
+    img,video,iframe{max-width:100%;height:auto}
+    input,select,textarea,button{max-width:100%}
+    .login-area,.cadastro-area,.perfil-area{padding:24px 14px!important}
+    .login-box,.cadastro-box,.perfil-box{padding:24px 18px!important;border-radius:16px}
+    .perfil-acoes{flex-direction:column}
+    .perfil-acoes a,.perfil-acoes button{width:100%;text-align:center}
+    #hero img,#galeria > figure{max-width:100%}
+}
+@media (max-width:380px){
+    header span, body>header span{font-size:21px!important}
+    .login-box,.cadastro-box,.perfil-box{padding:20px 14px!important}
+    h1{overflow-wrap:anywhere}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre ou crie sua conta no S.O.S pets">
+    <title>Minha Conta | S.O.S pets</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<header>
+    <div><a href="index.html"><span>S.O.S pets</span></a></div>
+    <button class="menu-mobile" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button><nav><ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="animais.html">Animais</a></li>
+        <li><a href="como-adotar.html">Como Adotar</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul></nav>
+</header>
+
+<main class="login-area">
+<section class="login-box">
+    <span class="linha"></span>
+
+    <div id="form-entrar">
+        <h1>Entrar no S.O.S pets</h1>
+        <p>Acesse sua conta para salvar favoritos e acompanhar seu perfil.</p>
+        <form id="login-form">
+            <label for="login-email">E-mail</label>
+            <input id="login-email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+            <label for="login-senha">Senha</label>
+            <input id="login-senha" name="senha" type="password" placeholder="Digite sua senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p class="troca-formulario">Ainda não tem conta?
+            <button type="button" id="mostrar-cadastro">Criar conta</button>
+        </p>
+    </div>
+
+    <div id="form-cadastro" hidden>
+        <h1>Criar conta</h1>
+        <p>Preencha os dados abaixo para criar seu perfil.</p>
+        <form id="cadastro-form">
+            <label for="cadastro-nome">Nome</label>
+            <input id="cadastro-nome" name="nome" type="text" placeholder="Seu nome" required>
+            <label for="cadastro-email">E-mail</label>
+            <input id="cadastro-email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+            <label for="cadastro-senha">Senha</label>
+            <input id="cadastro-senha" name="senha" type="password" placeholder="Crie uma senha" minlength="6" required>
+            <label for="cadastro-senha-confirmacao">Confirmar senha</label>
+            <input id="cadastro-senha-confirmacao" name="confirmacao" type="password" placeholder="Digite a senha novamente" minlength="6" required>
+            <button type="submit">Criar minha conta</button>
+        </form>
+        <p class="troca-formulario">Já tem uma conta?
+            <button type="button" id="mostrar-login">Entrar</button>
+        </p>
+    </div>
+
+    <p class="observacao">Esta versão usa armazenamento local apenas para o projeto escolar. Em um site real, as contas devem ficar em um servidor com banco de dados e autenticação segura.</p>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

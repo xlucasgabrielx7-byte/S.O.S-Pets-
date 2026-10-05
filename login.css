@@ -1,0 +1,95 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#10081a;color:#fff;min-height:100vh;animation:entrada .55s ease-out both}
+header{height:80px;background:#08080d;display:flex;align-items:center;justify-content:space-between;padding:0 5%;border-bottom:2px solid #8e3cff;position:sticky;top:0;z-index:10}
+header a{text-decoration:none}
+header span{font-size:32px;font-weight:900;color:#c084fc}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
+nav a:hover{color:#c084fc}
+.login-area{min-height:calc(100vh - 80px);display:flex;align-items:center;justify-content:center;padding:40px}
+.login-box{width:min(500px,100%);background:#15111d;border:1px solid #38284a;border-radius:20px;padding:42px;text-align:left;box-shadow:0 20px 50px #0005}
+.linha{display:block;width:55px;height:4px;background:#a855f7;margin:0 auto 20px;border-radius:5px}
+.login-box h1{text-align:center;margin-bottom:10px}
+.login-box>div>p{color:#aaa;text-align:center;margin-bottom:24px;line-height:1.5}
+.login-box form{display:flex;flex-direction:column;gap:9px}
+.login-box label{font-weight:bold;margin-top:5px}
+.login-box input{width:100%;padding:13px 14px;border-radius:10px;border:1px solid #3b2b4d;background:#0d0a12;color:#fff;outline:none}
+.login-box input:focus{border-color:#a855f7}
+.login-box form button{border:0;border-radius:10px;padding:13px;background:#a855f7;color:#fff;font-weight:bold;cursor:pointer;margin-top:10px}
+.login-box form button:hover{background:#9333ea}
+.troca-formulario{color:#aaa;text-align:center;margin-top:20px}
+.troca-formulario button{border:0;background:none;color:#c084fc;font-weight:bold;cursor:pointer;font-size:inherit}
+.observacao{font-size:.82rem!important;margin:25px 0 0!important;color:#888!important;text-align:center!important;line-height:1.5}
+@keyframes entrada{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){header{height:auto;padding:20px;gap:20px;flex-direction:column}nav ul{gap:14px;flex-wrap:wrap;justify-content:center}.login-area{padding:20px}.login-box{padding:30px 20px}}
+
+
+/* =========================================================
+   S.O.S pets — MELHORIAS RESPONSIVAS PARA CELULAR
+   ========================================================= */
+.menu-mobile{
+    display:none;
+    appearance:none;
+    border:1px solid rgba(199,125,255,.45);
+    background:#15111d;
+    color:#fff;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    font-size:24px;
+    line-height:1;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+}
+@media (max-width: 700px){
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    header, body>header{
+        min-height:64px;
+        height:auto!important;
+        padding:12px 16px!important;
+        flex-direction:row!important;
+        flex-wrap:wrap;
+        gap:10px!important;
+    }
+    header > div:first-child, body>header>div:first-child{flex:1 1 auto}
+    header span, body>header span{font-size:24px!important;letter-spacing:1px!important}
+    .menu-mobile{display:flex}
+    header nav, body>header nav{
+        display:none;
+        width:100%;
+        flex-basis:100%;
+    }
+    header nav.menu-aberto, body>header nav.menu-aberto{display:block}
+    header nav ul, body>header nav ul{
+        width:100%;
+        display:flex!important;
+        flex-direction:column!important;
+        align-items:stretch!important;
+        gap:0!important;
+        padding:8px 0 2px;
+    }
+    header nav li{width:100%;text-align:center}
+    header nav a{
+        display:block;
+        width:100%;
+        padding:11px 8px;
+        font-size:15px!important;
+        border-radius:8px;
+    }
+    header nav a:hover{background:#20152c}
+    main{max-width:100%;overflow:hidden}
+    img,video,iframe{max-width:100%;height:auto}
+    input,select,textarea,button{max-width:100%}
+    .login-area,.cadastro-area,.perfil-area{padding:24px 14px!important}
+    .login-box,.cadastro-box,.perfil-box{padding:24px 18px!important;border-radius:16px}
+    .perfil-acoes{flex-direction:column}
+    .perfil-acoes a,.perfil-acoes button{width:100%;text-align:center}
+    #hero img,#galeria > figure{max-width:100%}
+}
+@media (max-width:380px){
+    header span, body>header span{font-size:21px!important}
+    .login-box,.cadastro-box,.perfil-box{padding:20px 14px!important}
+    h1{overflow-wrap:anywhere}
+}

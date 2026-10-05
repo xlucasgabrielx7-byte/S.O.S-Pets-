@@ -1,0 +1,1036 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    animation: adote-entrada 0.65s ease-out both;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background: #10081a;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    width: 100%;
+    height: 80px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #08080d;
+
+    border-bottom: 2px solid #9b3cff;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+header > div a {
+    text-decoration: none;
+}
+
+header > div span {
+    color: #c084fc;
+
+    font-size: 32px;
+    font-weight: 900;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.5),
+        0 0 25px rgba(126, 34, 206, 0.3);
+
+    transition: 0.3s;
+}
+
+header > div span:hover {
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #c084fc,
+        0 0 30px #9333ea;
+}
+
+
+/* MENU */
+
+header nav ul {
+    display: flex;
+    gap: 38px;
+
+    list-style: none;
+}
+
+header nav a {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+header nav a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 50%;
+    bottom: -8px;
+
+    background: #c084fc;
+
+    transform: translateX(-50%);
+
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: #c084fc;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   PERFIL DO ANIMAL
+========================================= */
+
+#perfil-animal {
+    width: 90%;
+    max-width: 1250px;
+
+    margin: 70px auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   GALERIA
+========================================= */
+
+#galeria {
+    }
+
+
+/* FOTO PRINCIPAL */
+
+#galeria > figure {
+    width: 100%;
+    height: 470px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    border: 2px solid #8b2be2;
+
+    background: #1b0c29;
+
+    box-shadow:
+        0 0 30px rgba(147, 51, 234, 0.35),
+        0 0 70px rgba(126, 34, 206, 0.15);
+}
+
+#galeria > figure img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+#galeria > figure:hover img {
+    transform: scale(1.05);
+}
+
+
+/* MINIATURAS */
+
+#galeria > div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+#galeria > div img {
+    width: 100%;
+    height: 110px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    border: 2px solid #542278;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#galeria > div img:hover {
+    transform: translateY(-5px);
+
+    border-color: #c084fc;
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+#informacoes {
+    padding-top: 10px;
+}
+
+
+/* ETIQUETA */
+
+#informacoes > span {
+    display: inline-block;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7e22ce,
+            #c084fc
+        );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.35);
+}
+
+
+/* NOME */
+
+#informacoes h1 {
+    font-size: clamp(40px, 5vw, 58px);
+
+    line-height: 1.05;
+
+    color: #ffffff;
+
+    margin-bottom: 15px;
+
+    font-weight: 900;
+}
+
+
+/* DESCRIÇÃO CURTA */
+
+#informacoes > p {
+    color: #d7cce0;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   INFORMAÇÕES RÁPIDAS
+========================================= */
+
+#informacoes > div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* CARD */
+
+#informacoes article {
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2b143f,
+            #190c25
+        );
+
+    border: 1px solid #65318c;
+
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+#informacoes article:hover {
+    transform: translateY(-5px);
+
+    border-color: #b45cff;
+
+    box-shadow:
+        0 10px 25px rgba(126, 34, 206, 0.25);
+}
+
+
+/* ÍCONE */
+
+#informacoes article > span {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9333ea,
+            #c084fc
+        );
+
+    font-size: 21px;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.35);
+}
+
+
+/* ÍCONES AUTOMÁTICOS */
+
+#informacoes article:nth-child(1) span::before {
+    content: "🐾";
+}
+
+#informacoes article:nth-child(2) span::before {
+    content: "♥";
+}
+
+#informacoes article:nth-child(3) span::before {
+    content: "♂";
+}
+
+#informacoes article:nth-child(4) span::before {
+    content: "⌂";
+}
+
+
+/* TEXTO */
+
+#informacoes article strong {
+    color: #eee;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+#informacoes > section {
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    background:
+        rgba(42, 20, 61, 0.7);
+
+    border-left: 3px solid #a855f7;
+
+    border-radius: 0 15px 15px 0;
+}
+
+#informacoes > section h2 {
+    color: #c084fc;
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+#informacoes > section p {
+    color: #d6cadf;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   BOTÃO QUERO ADOTAR
+========================================= */
+
+#informacoes > a {
+    display: block;
+
+    width: 100%;
+
+    padding: 17px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7e22ce,
+            #c026d3
+        );
+
+    box-shadow:
+        0 0 25px rgba(168, 85, 247, 0.35);
+
+    transition: 0.3s;
+}
+
+#informacoes > a::before {
+    content: "♥ ";
+}
+
+#informacoes > a:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 35px rgba(168, 85, 247, 0.5);
+
+    background:
+        linear-gradient(
+            135deg,
+            #9333ea,
+            #d946ef
+        );
+}
+
+
+/* =========================================
+   CARACTERÍSTICAS
+========================================= */
+
+#caracteristicas {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 80px auto;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #28133b,
+            #170b22
+        );
+
+    border: 1px solid #63318b;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 30px rgba(126, 34, 206, 0.12);
+}
+
+#caracteristicas h2 {
+    text-align: center;
+
+    font-size: 34px;
+
+    margin-bottom: 35px;
+
+    color: #ffffff;
+}
+
+
+/* LISTA */
+
+#caracteristicas ul {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+    list-style: none;
+}
+
+#caracteristicas li {
+    padding: 15px;
+
+    text-align: center;
+
+    background: #1d0e2b;
+
+    border: 1px solid #66308b;
+
+    border-radius: 12px;
+
+    color: #ddd2e5;
+
+    transition: 0.3s;
+}
+
+#caracteristicas li::before {
+    content: "✓";
+
+    color: #c084fc;
+
+    font-weight: bold;
+
+    margin-right: 6px;
+}
+
+#caracteristicas li:hover {
+    transform: translateY(-5px);
+
+    border-color: #b45cff;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(126, 34, 206, 0.2);
+}
+
+
+/* =========================================
+   ANIMAIS SEMELHANTES
+========================================= */
+
+#semelhantes {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 100px auto;
+}
+
+#semelhantes > h2 {
+    text-align: center;
+
+    font-size: 36px;
+
+    margin-bottom: 45px;
+}
+
+#semelhantes > h2::before {
+    content: "♥";
+
+    color: #c084fc;
+
+    margin-right: 20px;
+}
+
+#semelhantes > h2::after {
+    content: "♥";
+
+    color: #c084fc;
+
+    margin-left: 20px;
+}
+
+
+/* GRID */
+
+#semelhantes > div {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* CARD */
+
+#semelhantes article {
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #2b153e,
+            #190c25
+        );
+
+    border: 1px solid #63318b;
+
+    border-radius: 20px;
+
+    padding-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+#semelhantes article:hover {
+    transform: translateY(-10px);
+
+    border-color: #b45cff;
+
+    box-shadow:
+        0 15px 35px rgba(126, 34, 206, 0.3);
+}
+
+
+/* IMAGEM */
+
+#semelhantes article img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+}
+
+#semelhantes article:hover img {
+    transform: scale(1.05);
+}
+
+
+/* NOME */
+
+#semelhantes article h3 {
+    color: #c084fc;
+
+    font-size: 22px;
+
+    margin: 20px 20px 12px;
+}
+
+
+/* LINK */
+
+#semelhantes article a {
+    display: inline-block;
+
+    margin-left: 20px;
+
+    padding: 8px 16px;
+
+    color: white;
+
+    background: #7226a8;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+#semelhantes article a:hover {
+    background: #a855f7;
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 100px;
+
+    padding: 55px 7% 30px;
+
+    background: #08080d;
+
+    border-top: 2px solid #7432a8;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+}
+
+footer h2 {
+    color: #c084fc;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+footer p {
+    color: #c8bdcf;
+
+    max-width: 450px;
+}
+
+
+/* MENU FOOTER */
+
+footer nav {
+    justify-self: end;
+}
+
+footer nav ul {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        150px 150px;
+
+    gap: 12px;
+}
+
+footer nav a {
+    color: #ddd;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+footer nav a:hover {
+    color: #c084fc;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   ANIMAÇÕES
+========================================= */
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    #perfil-animal {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    #galeria > figure {
+        height: 450px;
+    }
+
+    #caracteristicas ul {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    #semelhantes > div {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 750px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    header nav ul {
+        gap: 18px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    #perfil-animal {
+        width: 90%;
+
+        margin-top: 50px;
+    }
+
+    #galeria > figure {
+        height: 350px;
+    }
+
+    #caracteristicas ul {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    #semelhantes > div {
+        grid-template-columns: 1fr;
+    }
+
+    #semelhantes article {
+        max-width: 500px;
+
+        margin: auto;
+
+        width: 100%;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    footer nav {
+        justify-self: center;
+    }
+
+    footer p {
+        margin: auto;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 500px) {
+
+    header > div span {
+        font-size: 27px;
+    }
+
+    header nav ul {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    #perfil-animal {
+        width: 92%;
+
+        margin-top: 40px;
+    }
+
+    #galeria > figure {
+        height: 300px;
+
+        border-radius: 20px;
+    }
+
+    #galeria > div img {
+        height: 80px;
+    }
+
+    #informacoes h1 {
+        font-size: 40px;
+    }
+
+    #informacoes > p {
+        font-size: 16px;
+    }
+
+    #informacoes > div {
+        grid-template-columns: 1fr;
+    }
+
+    #caracteristicas {
+        width: 92%;
+
+        padding: 30px 20px;
+    }
+
+    #caracteristicas h2 {
+        font-size: 28px;
+    }
+
+    #caracteristicas ul {
+        grid-template-columns: 1fr;
+    }
+
+    #semelhantes {
+        width: 92%;
+    }
+
+    #semelhantes > h2 {
+        font-size: 28px;
+    }
+
+    footer {
+        padding: 45px 20px 25px;
+    }
+
+    footer nav ul {
+        grid-template-columns:
+            120px 120px;
+    }
+}
+/* Entrada discreta da página */
+@keyframes adote-entrada {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.aviso-site{position:fixed;right:20px;bottom:20px;z-index:9999;background:#15111d;color:#fff;border:1px solid #a855f7;border-radius:10px;padding:12px 16px;opacity:0;pointer-events:none;transform:translateY(8px);transition:.25s}.aviso-site.visivel{opacity:1;transform:none}.chat-botao{position:fixed;right:20px;bottom:75px;width:48px;height:48px;border:0;border-radius:50%;background:#a855f7;color:#fff;cursor:pointer;z-index:9998}.chat-adote{position:fixed;right:20px;bottom:130px;width:250px;background:#15111d;border:1px solid #38284a;border-radius:15px;padding:18px;z-index:9998;display:none;box-shadow:0 15px 35px #0006}.chat-adote.aberto{display:block}.chat-adote strong{display:block;margin-bottom:8px}.chat-adote p{color:#aaa;margin-bottom:12px}.chat-adote button{display:block;width:100%;margin-top:7px;padding:9px;border:1px solid #38284a;border-radius:8px;background:#201629;color:#fff;cursor:pointer}.acoes-animal{display:flex;align-items:center;gap:10px}.favoritar{border:0;background:transparent;color:#c084fc;font-size:28px;cursor:pointer}.nenhum-resultado{color:#aaa}
+
+
+/* =========================================================
+   S.O.S pets — MELHORIAS RESPONSIVAS PARA CELULAR
+   ========================================================= */
+.menu-mobile{
+    display:none;
+    appearance:none;
+    border:1px solid rgba(199,125,255,.45);
+    background:#15111d;
+    color:#fff;
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    font-size:24px;
+    line-height:1;
+    cursor:pointer;
+    align-items:center;
+    justify-content:center;
+}
+@media (max-width: 700px){
+    html,body{width:100%;max-width:100%;overflow-x:hidden}
+    header, body>header{
+        min-height:64px;
+        height:auto!important;
+        padding:12px 16px!important;
+        flex-direction:row!important;
+        flex-wrap:wrap;
+        gap:10px!important;
+    }
+    header > div:first-child, body>header>div:first-child{flex:1 1 auto}
+    header span, body>header span{font-size:24px!important;letter-spacing:1px!important}
+    .menu-mobile{display:flex}
+    header nav, body>header nav{
+        display:none;
+        width:100%;
+        flex-basis:100%;
+    }
+    header nav.menu-aberto, body>header nav.menu-aberto{display:block}
+    header nav ul, body>header nav ul{
+        width:100%;
+        display:flex!important;
+        flex-direction:column!important;
+        align-items:stretch!important;
+        gap:0!important;
+        padding:8px 0 2px;
+    }
+    header nav li{width:100%;text-align:center}
+    header nav a{
+        display:block;
+        width:100%;
+        padding:11px 8px;
+        font-size:15px!important;
+        border-radius:8px;
+    }
+    header nav a:hover{background:#20152c}
+    main{max-width:100%;overflow:hidden}
+    img,video,iframe{max-width:100%;height:auto}
+    input,select,textarea,button{max-width:100%}
+    .login-area,.cadastro-area,.perfil-area{padding:24px 14px!important}
+    .login-box,.cadastro-box,.perfil-box{padding:24px 18px!important;border-radius:16px}
+    .perfil-acoes{flex-direction:column}
+    .perfil-acoes a,.perfil-acoes button{width:100%;text-align:center}
+    #hero img,#galeria > figure{max-width:100%}
+}
+@media (max-width:380px){
+    header span, body>header span{font-size:21px!important}
+    .login-box,.cadastro-box,.perfil-box{padding:20px 14px!important}
+    h1{overflow-wrap:anywhere}
+}
